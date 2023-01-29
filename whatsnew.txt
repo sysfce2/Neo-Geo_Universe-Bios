@@ -1,0 +1,1061 @@
+WHATS NEW IN VERSION 4.0
+------------------------
+
+To mark the version 4.0 milestone of the Universe Bios I have given it a slight facelift.
+Some menu layouts are changed and colors used on the splash screen and default colors for the
+in game menu have changed. This is done to try and replicate the gold coloring on the AES and
+Joystick shells. You still have the ability to customise colors of the ingame menu if you wish.
+
+
+Additions
+
+
+  PICKnMIX MVS/AES (requires the correct 161-in-1 multicart).
+
+    This feature will use the many games on the multicart to turn the system into the ultimate
+    multislot. It may also work on MVS multislot systems but please insure all other cart slots
+    are empty. The only hacked version of a game used from the 161-in-1 is SNK vs CAPCOM Plus.
+
+    See www.universebios.com/picknmix.html for more information and how to use.
+
+    A special thanks to 'ack' for exstensive bug reporting and testing on multislot hardware,
+    also 'miisalo' and 'RockstarRunner' for MVS and AES testing. 
+
+    PICKnMIX IS A TOTALLY UNSOPPORTED FEATURE given the nature of the multicarts.
+
+
+  NeoSD related (v1.06 or later firmware required).
+
+    The following two additions require the ROM 'sfix.sfix' to be placed into the root directory
+    of the NeoSD's SD card. These fixes are not possible without a NeoSD.
+
+      On AES hardware, when in arcade mode, the 'how to play' screens of NAM-1975, Baseball
+      Stars Professional and Mahjong Kyo Retsuden will have correct graphics. 
+
+      On AES hardware, when in USA arcade mode, the classic 'winners don't use drugs' screen
+      will have correct graphics in all games apart from Garou, Matrimelee, Metal Slug 3,
+      Metal slug 4, SNK vs Capcom, The King of Fighters 2000 and The King of Fighters 2003.
+
+    Added a NeoSD color theme for the ingame menu (choose bank '03' in the menu color changer).
+
+
+  Added new option to disable the daily, weekly and monthly hiscore reset to MVS backupRAM.
+
+    This option is enabled by default (Universe Bios general settings) but can be switched off
+    if you want hiscores to clear as game maker intended. The following games are affected;
+
+      Aggrs of Dark Kombat  Ninja Combat             Trash Rally
+      Art od Fighting       Ninja Commando           Twinkle Star Sprites
+      Art of fighting 2     Over Top                 Wind Jammers 
+      Art of Fighting 3     Quiz King of Fighters    World Hereos
+      Blues Journey         Spin Masters             World Hereos 2
+      Crossed Swords 2      Sonic Wings 3            World Hereos 2 Jet
+      Ghost Pilots          King of Fighters 2001    World Hereos Perfect
+      Magician Lord         King of Fighters 2002    Zintrick
+
+    Due to the change around of some options to make this possible I advise MVS users check
+    the options in the Universe Bios 'general settings' to confirm they are set as intended. 
+
+
+  In a games softDIP settings (testmode), pressing 1UP start will reset the DIPs to default.
+  Added English translations for Japanese games that had Japanese only SoftDIP settings.
+  The Universe bios can now detect a 18Mhz overclock (hopefully).
+  Added 'Fast Verify' support to PC-2-NEO (USB only).
+
+
+Changes
+
+  Changed splash screen and main menu colors, NeoGeo logo is now Gold.
+  Changed the default colors of the ingame menu. You can still choose old colors and edit colors
+    if required by using the ingame menu color changer.
+  Made the In Game Menu and Main Menu more responsive to joystick and button input.
+  There are now five colors you can adjust on the ingame menu color changer.
+  Optimised Code that applies game cheats to memory.
+  Made testmode entry graphically cleaner (less glitching).
+  Made the cabinet softDIP 'Game Select' default to 'Free' instead of 'Only when credited'.
+  Now says 'NGH' instead of 'ID' in the game cart crc check.
+  Improved the 'no cheats in database' message.
+  The main memory viewer (testmode, exception error, hardware error) should now open on the
+    first slot with a game (multislot hardware).
+  Improved the MVS cart version of kof2001 when in console mode. The games menu should no longer
+    glitch from time to time. Also removed the vertical borders on the options screen.
+
+
+Fixes (some of these very minor)
+
+  Fixed an issue introduced in Unibios v3.1 which caused any set softDIPs to reset after using
+    the soft reboot option on AES haedware.
+  Fixed ingame menu colors saved to memory card from getting corrupted.
+  Fixed AES version of Metal Slug 3 showing the red warning screen when run in Arcade mode.
+  Fixed 'AOF3' from showing the console mode menu when in arcade mode on AES hardware.
+  Fixed V-Liner crashing when the coin entered or select pressed.
+  Fixed overclock info sometimes incorrectly showing after exiting softDIPs (after soft reset).
+  Fixed possible graphic corruption in the testmode main menu if the calendar chip is faulty.
+  Fixed red screen flash when bios draws 'how to play' in early games (issue in original bios).
+  Fixed Top Players Golf from allowing debug DIP editing (game does not have any).
+  Fixed minor graphical glitch entering the ingame menu color changer.
+  Fixed missing values in patch and debug dips editing if game is an original MVS KOF2003.
+  Fixed glitching on cart check entry if game King of Fighters 2003.
+  Fixed glitching when exiting ingame menu if game King of Fighters 2003. 
+  Fixed Splash screen and menues if game is MVS version of kof2003 on AES hardware.
+  Fixed Splash screen and menues if game is kof 10th anni extra plus on AES hardware.
+  Fixed font in jukebox and cart check if game is MVS version of kof2003 MVS hardware.
+  Fixed font in jukebox and cart check if game is kof 10th anni extra plus on MVS hardware.
+  Fixed 'King of Gladiator' hack throwing a warning screen when running in arcade mode on AES.	 
+
+  Stopped language softDIP showing when in Japan region for games SamSho 4, 5 and 5 Special.
+  Stopped Street Hoop's 'team select' softDIP showing when in Japan region.
+  Stopped gfx curruption on splash screen (at power on) when the 161-in-1 multicart used. 
+  Hopefully fixed corruption exiting the ingame menu on a 18Mhz overclocked MVS/AES. 
+  Hopefully fixed corruption in the General settings Menu on a 18Mhz overclocked MVS/AES. 
+
+
+Hiscore saving (memory card)
+
+  Added HS saving support for Football Frenzy.
+  Added HS saving support for Goal! Goal! Goal!
+  Added HS saving support for Stakes Winner.
+  Added HS saving support for Stakes Winner 2.
+  Added HS saving support for Real Bout Fatal Fury (Korean).
+  Fixed Neo Bomberman hiscore saving (old HS save will need deleting).
+  Fixed Quiz Diasousa Sen so hiscore displayed during game at top is now correct.
+  Fixed Puzzle Bobble so it now shows correct hiscore table during first attract mode cycle.
+  Fixed Puzzle Bobble 2 not saving the last part of the HS table.
+
+
+Cheats
+
+  Renamed all 'AES Infin Credits' cheats to 'Infin AES Continue'.
+  Korean games now show correct game in the cheat menu (if different than English names).
+  Corrected Strikers 1945 Plus game name in the cheat menu.
+  Added Real Bout Fatal Fury (Korean) cheats.
+  Added Infinite AES Continue cheats to Blues Journey.
+  Top Hunter cheats improoved. They now work on all worlds. Also, keeping D pressed will
+    disable the gun and ammo cheats (while D pressed) for that player.
+  Renamed all 'Always Score 00' cheats in football games to 'Always No Score'. 
+  Knights Chance now reconigsed by the in game menu (no cheats though).
+  Other minor cheat naming issues here and there.
+  Added cheats for Older Power Spikes II (only 'Infinite Iime' cheat atm).
+
+
+CRC database
+
+
+  Added older Power Spikes II CRC (MVS, CRC reported for RAM region - 0x8FACDE4C)
+    Not currently in MAME, Japanese region game name is 'Super Volley 94'.
+
+  Added alternate Metal SLug 3 CRC (0x9763419E).
+  Added alternate V-Liner CRC (V0.7E 0x49A94DB5).
+  Added alternate V-Liner CRC (V0.53 0xE263DCE8).
+  Added alternate V-Liner CRC (v0.7A 0x052F93ED).
+  Added alternate Garou CRC (AES).
+  Added alternate Pochi and Nyaa CRC.
+  Added Last Resort prototype CRC.
+  Added alternate Burning Fight prototype CRC.
+  Added alternate King of the Monsters 2 CRC.
+  Added Real Bout Fatal Fury (Korean) CRC.
+  Added alternate Blues Journey CRC.
+  Added alternate Samurai Shodown V CRC.
+  Added alternate World Heroes 2 CRC.
+  Added alternate Sengoku 3 CRC.
+  Knights Chance is now reconigsed by the CRC checker (reported as custom).
+
+
+
+---------------------------------------------------------------------
+
+
+
+WHATS NEW IN VERSION 3.3
+------------------------
+
+Additions / Changes
+
+
+  Added ability to display the crosshatch and color bar screens on AES hardware. Hold BCD
+    during the unibios splash screen and choose option 1. To cycle between the crosshatch
+    and color bar screen press 1up start.
+
+  The ingame menu patch screen now shows you the value at the patch address before and after
+    it's patched.
+
+  The Universe bios can now detect a 16Mhz overclock. When an overclock is active it will
+    be reported on the main unibios menu screen.
+
+  The ability to use buttons 'A' and 'B' as multislot 'game select' buttons during attract
+    mode or on the games title page. The Universe Bios option 'Enable Cabinet Fixes' must
+    be enabled to use this new feature. Big thanks to kuze for the help testing this.
+
+  PC2NEO (USB version only) updated to work with version 3.4 of PC2NEO firmware or later,
+    only standard transfer mode is supported. 08bit upload and download also now supported
+    to allow easy for memory card loading and saving.
+
+Changes
+
+  The Universe Bios splash screen no longer draws with the older NG:DEV games on AES hardware.
+  The default in game menu color has changed (you can still change it back to the old colors).
+  Changed some of the internal ingame color pallettes.
+  Made the crosshatch screen border red to match red used in other tests.
+  Added small delay before reading unibios settings from the memory card (AES only).
+  Renamed the 'Enable 1Up Coin Move' setting to 'Enable Cabinet Fixes'. This feature works
+    still works in the same way but has expanded functionality as explained above.
+
+Improvements
+
+  The Ironclad incorrect color brightness bug/protection will not happen when in Euro region.
+  The calender hardware test can no longer get stuck in an infinate loop. This was an infamous
+    situation that happens on the original neo geo bios.
+
+  If Hiscore saving (to memory card) gets disabled on multislot hardware due to cheats or
+    debugDIPs, it will now re-enable on game change.
+
+  Small Improvements in the memory card manager (text layouts).
+  Less chance of pixel glitching on ingame menu exit back to game.
+  Formatting a memory card on AES no longer clears any stored color settings (for ingame menu).
+  The boot time memory card check no longer clears any stored color settings used by the
+    ingame menu. This test is only done if the memory card is not formatted.
+
+  The BackupRAM memory test now checks the first 0x10 bytes.
+  The boot time memory card check now tests the first 0x04 bytes.
+
+Fixes
+
+  Fixed long standing bug in games KOF98, BREAKREV, NEOCUP98 and RBFF2 where inserting a
+    coin on the "Winners Don't Use Drugs" screen caused the 8x8 layer to corrupt or resets
+    on multislot hardware. This happened with the original USA bios also. Big thanks to
+    kuze for the help testing this fix.
+
+  Fixed DIP hilighting (shows if an active cheat is patching the DebugDIPs location),
+    this was kind of broke in v3.2.
+
+  Fixed rare instance where going in and out of the DebugDIPs screen could currupt a games
+    hiscore table if the game did not support DebugDIPs.
+
+  Fixed missing title screen in 'The Super Spy'.
+  Fixed minor color glitch on active cheat 'X' when entering cheat menu.
+  Fixed pixel glitches on startup just before the splash screen draws.
+  Fixed pixel glitches entering the ingame color changer page.
+  Fixed pixel glitches on the ingame color changer page.
+  Fixed rare glitching on in game menu memory viewer page.
+  Fixed rare glitching on in game menu video viewer page.
+  Lessened glitching in various places through test mode.
+  Metal Slug 2 Turbo (hack) support added for cheats and hiscore saving.
+
+Cheats / CRC Database
+
+  Added cheats for Crossed Swords 2.
+  Added new cheats added for Neo Bomberman (plus fixed existing).
+  Added cheats for hidden characters in Zintrick.
+  Added new cheats for Iron Clad.
+  Added Infinite Magic cheats to Kabuki Klash.
+  Added better cheats for Stakes Winner.
+  Added better cheats for Stakes Winner 2.
+  Added 'Show SP commands OSD' cheat for Samurai Shodown 4
+  Fixed Rage of the Dragons 'Infinate Time' cheat to work with home cart
+  Fixed Ninja Combat 'Max Power' cheat typo.
+  Fixed 3 Count Bout 'Infinite Energy' cheats to no longer be buggy.
+  Fixed Fatal Fury 3 'PL2 Infin Credits' cheat.
+
+  Added Crossed Swords 2 to the crc database.
+  Added Rage of the Dragons (home cart) to the crc database.
+  Added New Fight Fever version to the crc database.
+  Added Metal Slug 2 turbo (hack) to the crc database.
+
+
+---------------------------------------------------------------------
+
+
+
+WHATS NEW IN VERSION 3.2
+------------------------
+
+Additions / Changes
+
+
+  New Controller support
+  ----------------------
+
+    Added full four player support to the unibios if relevent hardware detected.
+    This allows Kizuna to be played in 4 player mode without requiring cheats.
+    HARDDIP 2 must be 'ON' when using MVS hardware, not required for AES.
+
+    The AES controller test (2up ABCD) is no longer accessable from MVS hardware
+    due to lack of exit option, use the hardware test (test mode) instead.
+
+    Added a four player controller test which will automatically show in the
+    standard '2up ABCD' controller test if the four player hardware is detected.
+
+    Added a Mahjong controller test which will automatically show in the standard
+    controller test if a mahjong controller is detected. Press ABCDE on the
+    mahjong controller to enter test. This code works on either joy1 and joy2.
+
+
+  MVS test mode improovments
+  --------------------------
+
+    HardDIP 3 (use mahjong controller) now shows on HardDIP screen.
+    Improoved visibility of active DIPs in the HardDIP screen.
+    4UP controller I/O test added if adapter detected and HardDIP 2 on.
+    Mahjong controller I/O test added in test mode if HardDIP 3 on.
+    Improoved I/O test layout and visibility.
+
+    The memory card check in the test mode hardware test does not delete data from cards
+      up to 16kb in size. This was also in 3.1 also but forgot to list it in whats new.
+    Fixed crash during the memory card test if the game in system is either Puzzle
+      Bobble or Puzzle Bobble 2.
+
+    Fixed rare curruption issue when drawing the red cursor in main menu.
+
+
+  Hiscore saving changes and fixes
+  --------------------------------
+
+    Hiscore loading from memory card now works for all games in a multislot system.
+
+    Hiscore saving now supported in the following games;
+      Pop n Bounce, Spin Master, Quiz King of Fighters, Zupapa, Zintrick,
+      The Irritating Maze, Chibi Marukochan Deluxe Quiz, Soccer Brawl,
+      Legend of Success Joe, Temco World Soccer.
+
+   Fixed Hiscores (shown during gameplay) in the following games;
+     Viewpoint, Fight Fever, Mutation Nation, Ninja Combat.
+       (You must also delete any v3.1 created H.S. saves for the following)
+     Art of Fighting, Art of Fighting 2, Ghost Pilots.
+
+   Fixed Hiscore saving in KOF2001 (delete v3.1 created HS save).
+   Fixed Hiscore saving in Neo Drift Out (delete v3.1 created HS save). 
+
+Changes
+
+  Changed the way DebugDIPs are handled.
+    On multislot hardware DebugDIPs are now cleared on gamechange (DEV mode setting is remembered).
+    DebugDIP changing stopped for games known not to use them (solves hiscore curruption).
+
+  Changed the way hardware errors are displayed on screen.
+
+  Added ability to access PC-2-NEO from the ingame menu (move over 'soft reboot system'
+    and move right.
+
+  Changed the AES hardware test button code to B+C+D. Also added a message before the
+    test starts so there is no confusion wether the test is running or not.
+
+  Changed the way overclock patches work on the 'Max 330 Mega' spinning splash logo.
+  Added overclock patches to stop curruption on the 'Giga Power' spinning splash logo.
+    Only exception is Real Bout Fatal Fury 2 which cannot be patched at this time.
+
+  On a multislot system in console mode you will no longer jump to the next game after
+    game over. Some games do not follow the rule, Shock Troopers 2 and Magical Drop 3
+    will jump to the next game regardless due to the way they are programmed.
+
+  Stopped 'Your card is still inserted' message when in console mode on MVS hardware
+    if using a memory card.
+  Stopped 'Your card is still inserted' message when in arcade mode on MVS hardware
+    if using a memory card with Hiscore saving enabled.
+
+  Stopped splash screen and main menu curruption from potential new NG:DEV.TEAM games.
+
+  Tweeked Jukebox init, now less chance of an 'Error starting sound' message.
+
+  Compressed the memory footprint in the bios of the cart crc database.
+
+  Added The King of Fighters '97 Oroshi Plus 2003 the the crc database.
+
+Fixes
+
+  Fixed '1UP coin move' operation which was broke in v3.0 / v3.1. Option allows coin
+    in chute one to credit as coin in shoot two if 2up start held and region is USA.
+
+  Fixed region/mode saving when using a 16bit memorycard on AES hardware.
+  Fixed ingame menu color saving when using a 16bit memorycard on AES hardware.
+  Fixed disable splash screen not working when using 16bit memorycard on AES hardware.
+
+  Fixed lockup on AES SoftDIP page if game is Korean version of AOF3.
+  Stopped 'NEXT PAGE' showing in the AES SoftDIP settings page for some games.
+  Games with no softDIP handled better on AES SoftDIP page (vliner/jockeygp).
+
+  Fixed crosshatch screen not showing after a hardware error if no cart inserted.
+
+  Fixed 2020 Super Baseball cheats to work in all versions and regions.
+  Fixed AOF3 cheats which would sometimes stop working.
+  Fixed 'Infinite' spelling in the cheat menu (typo in version 3.1).
+  Fixed KOF94 game title not showing in the cheat menu.
+
+
+---------------------------------------------------------------------
+
+
+
+WHATS NEW IN VERSION 3.1
+------------------------
+
+Additions / Changes
+
+  Hiscore saving to memory card!!!
+  --------------------------------
+
+    Big thanks to smkdan for allowing the use of his code here. This is not fully
+    tested and there could very well be problems. To this end and to allow the greatest
+    testing possible this feature is also included in the free 3.0 version of the unibios.
+    This should work in both MVS and AES mode but given scores are saved to backupRAM on 
+    MVS there could be extra problems. If this is the case only use the feature on AES
+    hardware. There may also be issues with multigame bootleg carts.
+
+    To enable, format the card using the unibios (must be formatted with unibios). Then set
+    the last character of the cards username to '!'.
+
+    To stop filling the hiscore tables with scores obtained using cheats, debug DIPs or patches
+    hiscore saving will be disabled if these features are used until the system is reset.
+
+    NOTES.
+    It may not work with all games so please report issues you have.
+
+    Puzzle Bobble 
+      In AES mode hiscores are not loaded until the 2nd time the score table draws.
+
+
+  PC-2-NEO Improvements
+  ---------------------
+
+    U.S.B. support is added and information will be made available in due course on how
+    to build the hardware. Speeds to expect are 155k/sec upload and 32k/sec download.
+    This spec will be ported to the NeoGeo CD system making it possible to upload
+    entire homebrew/small games faster than loading from the CD.
+  	
+    Parallel port upload and download speeds improved to around 2.5k/sec. The new PC
+    client is required which is available on the homepage.
+
+
+  Added ability to disable the splash screen on AES providing a memory card is present. To
+    use format the card using the unibios (must be formatted with unibios). Then set
+    the second from last character of the cards username to '!'.
+
+  Stopped error message when changing games with multigame bootleg carts.
+
+  Added the screensaver to the jukebox.
+
+  Removed Crossed Swords protection that cleared the bios System and Region settings.
+    This protection could be used in other games also.
+
+  Removed SS4 Korean backupRAM protection.
+
+  Removed RBFFS Korean backupRAM protection.
+
+Fixes
+
+  Fixed currupted graphics on splash screen/menu when playing NgDevTeam games (thanks Timm).
+  Fixed memory card manager username input curruption if the sysyem is overclocked to 16Mhz. 
+  Fixed bstars going funny after exiting ingame menu sometimes.
+  Fixed NAM1975 Unlimited Lives cheat so you don't start off of the screen after dying
+  Fixed SamSho2 inf energy cheats to not cause infinate bonus count after round win.
+  Fixed MSlug3 save 15 prisioners cheats to not cause game freeze on mission completion.
+  Fixed Sengoku permanent weapon cheats so you can pick up and change weapons when active.
+  Fixed Bang Bang Busters debug dips currupting the Hiscore table (no debug dips).
+
+Cheats / CRC Database
+
+  Added cheats for SS4 Korean into database.
+  Added cheats for Quiz Daisousa Sen Korean into database.
+  Added cheats for RBFFS Korean into database.
+  Added infinate Exceed cheats to SVC.
+  Added infinate Quota cheats to magdrop 2.
+  Added infinate Quota cheats to magdrop 3.
+  Added some new cheats to bstars.
+  Added some new cheats to bstars2.
+  Added cheats for Bang Bang Busters.
+
+  Added Treasure of the Caribbean crc into database.
+  Added Bang Bang Busters crc into database.
+  Added Quiz Daisousa Sen Korean crc into database.
+  Added Quiz King of Fighter Korean crc into database.
+  Added RBFFS Korean crc into database.
+  Added SS4 Korean crc into database.
+  Added new SS2 Korean crc into database.
+  Added new Bstars crc into database.
+  Added Ironclad crc into database.
+  Added new Jockey GP crc into database.
+  Added new Alpha Mission II crc into database.
+  Added new Burning Fight crc into database.
+  Added new Iron clad crc into database.
+  Added new King of the Monsters 2 crc into database.
+
+  Updated Jyanshin Densetsu crc in database. 
+
+
+---------------------------------------------------------------------
+
+
+WHATS NEW IN VERSION 3.0
+------------------------
+
+Additions / Changes
+
+  PC-2-NEO
+  --------
+    This new feature gives the ability to transfer data to and from a NeoGeo via a cable
+    connected to a PC. It should be considered experimental at this point but can be
+    accessed from the main unibios menu. See the universebios homepage for more
+    information and how to build the needed cable. 
+
+  Added disable splash screen option back into general bios settings.
+
+  If a game is not in the socket on AES hardware you will see a 'white' blank screen at
+    power on. I changed this to save confusion over some people thinking the old blue
+    color was the result of a hardware check. The Unibios does not do a hardware
+    check in the same way, you must have a game in the socket and use the button
+    code at power on.
+
+  Changed the way region is set up on MVS hardware so there is more chance of a system
+    with bad BackupRAM booting correctly.
+
+  Made code changes to help stop unibios ASCII curruption when the system is
+    overclocked (untested).
+
+  Changed code so the NeoGeo spinning logo (older games only) draws correctly when a
+    system is overclocked (untested).
+
+  Button C is now used to exit the unibios main menu.
+
+Fixes
+
+  Fixed a problem that could cause some games to have glitches after swapping games on
+    multislot hardware when in console mode.
+
+  Fixed garbled music with Metal Slug 4 in the jukebox from power on.
+
+Cheats / CRC Database
+
+  New cheats added here and there.
+  Fixed KOF96 boss cheat so numbers no longer appear above the power bars.
+  Added another Real Bout Fatal Fury CRC.
+  Added another Soccer Brawl CRC.
+  Added another World Heroes CRC.
+  Added another Ghost Pilots CRC.
+  Added Nightmare in the Dark bootleg CRC.
+  Fixed a CRC issue with Waku Waku 7.
+
+
+---------------------------------------------------------------------
+
+
+WHATS NEW IN VERSION 2.3
+------------------------
+
+Additions / Changes
+
+  Hilighting 'Soft Reset' in the ingame menu will now give you new options when moving the
+    1up joystick left and right. New options are;
+
+     - Main Memory Viewer
+     - Video RAM Viewer
+     - Menu Color Changer
+
+  The screen will now blank out if the ingame menu is left alone on its main menu page (after
+    about 1 minute). Simply move or press any 1Up control to restore the screen. This new
+    option helps prevent monitor burnin if you use the ingame menu to pause your games.
+  Removed the trackball cheat from 'The Irritating Maze', instead trackball support is
+    always enabled unless the joystick cheat is used.
+
+Fixes
+
+  Fixed a minor ingame menu color issue with 'Real Bout Fatal Fury'.
+  Fixed music offset so 'GhostLop' music can now be heard in the jukebox.
+  Fixed 'SVC Plus' bootlegs from not allowing character select when in console mode.
+
+Cheats / CRC Database
+
+  Added crc info for 'Metal Slug 6 hack'.
+  Added crc info for the AES version of 'Metal Slug 4'.
+  Added crc info for 'King of Fighters 2002 Magic Plus (hack)'.
+  Added crc info for 'Crouching Tiger Hidden Dragon Super Plus (hack)'.
+  Added cheats to give 1000 credits in 'Jockey GP'.
+  Added cheats to give 1000 credits in 'V-Liner'.
+  Added cheats to 'Metal Slug 6 hack'.
+  Added cheats to play as Rugal in 'KOF 94'.
+  Added cheats to play as Amakusa in 'Samurai Shodown'.
+  Added cheats to unlock bosses in 'Art of Fighting'.
+  Added cheats to unlock bosses in 'Bang Bead' plus more.
+  Added cheats to shrink characters in kof96.
+  Added cheats to force single color blocks to drop in 'Gururin'.
+  Fixed the 'KOF 97' red energy cheat to the correct energy level.
+  Updated the 'KOF97' unlock bosscharacters cheat to also allow Orochi.
+  Updated the 'Fatal Fury 2' hidden character cheats, hopefully they wont't cause a crash
+    now after winning a match. There will still be problems on the continue screen.
+  Added cheat to allow more than one projectile in 'KOF94' and 'KOF96' though it only
+    works well if used with the action speed up cheat.
+  Added Cheat / CRC support for the following Korean releases.
+    - Art of Fighting 3: The Path of the Warrior 
+    - Real Bout Fatal Fury 2: The Newcomers
+    - Fighters Swords 
+    - The Last Soldier
+
+
+---------------------------------------------------------------------
+
+
+WHATS NEW IN VERSION 2.2
+------------------------
+
+Additions / Changes / Fixes
+
+  The splash screen will no longer shown twice or more (on multislots) after the backup
+    memory is reset.
+  The memory card format option will no longer wipe the region stored in the memory card
+    on AES hardware.
+  The arcade protect setting can now have either the testmode button pressed or HardDIP 1
+    on (force test mode) to get access back to the button Codes on the splash screen.
+  Made visual improvements to the main memory card manager menu.
+  Cleaned up screens and messages in the memory card manager, test mode and hardware test.
+  Changed the Cheat database storage slightly. It now takes less space in the Bios which
+    is good thing as space was beginning to become quite tight.
+  Fixed the AES hardware test code (A+B+D) so it also works after the splash screen is drawn. 
+  Fixed the hardware error message from disapeering on AES hardware as soon as the hardware
+    test button code (A+B+D) was released.
+
+Fixes (game related)
+
+  Fixed the AES version of 'King of Fighters 2003' from crashing after exiting the ingame
+    menu (bug introduced in 2.1).
+  Fixed 'Andro Dunos' to start attract mode correctly on AES hardware.
+  Fixed 'Andro Dunos' 1up not being able to continue on the last credit in a two player
+    game in console mode if started with 3 credits each.
+  Fixed Fight Fever to work correctly when freeplay is enabled (start was not responding).
+  Fixed garbage in 'Alpha Mission II' bonus rate SOFTDip setting on AES hardware.
+  Stopped SVC level select showing in a two player game when in arcade mode on AES hardware.
+
+Cheats / CRC Database
+
+  Added cheat so that Irtating Maze is playable with 1up joystick (hold buttons B or C
+    for different speeds). This cheat has not yet been tested on real hardware.
+  Added cheat allowing boss characters to show in AES mode with 'Art of Fighting 3'.
+  Added cheat to enable blood in 'Samurai Shodown 5 Special'.
+  Added cheats to play as bosses in 'Voltage Fighter'.
+  Added cheats so 1up can play as bosses in 'Fatal Fury 2', (can cause crashes).
+  Added cheats and crc info for 'Lansquenet 2004' hack.
+  Added cheats and crc info for 'King of Gladiators' hack.
+  Added crc info for 'The King of Fighters 2002 Magic Plus II'.
+  Added crc info for 'King of Fighters 10th Unique'.
+  Fixed the 'Sengoku 3' boss unlock cheat to add bosses into the mini character select
+    (happens after continue) if the cheat was enabled after a game had started.
+  Fixed incorrectly labeled 2up autofire cheat in 'Metal Slug 2'.
+
+
+---------------------------------------------------------------------
+
+
+WHATS NEW IN VERSION 2.1
+------------------------
+
+Additions
+
+  Added a new MVS general Bios setting 'Enable 1Up Coin Move'. When enabled this setting
+    will force a coin entered into a cab with only one coin chute to register on the 2Up
+    side as long as the 2Up start button is held down while the coin is entered. The Bios
+    should be set to USA region and Arcade mode or VS-Mode must be enabled and supported
+    by the game being played for this feature to work.
+  Added a new MVS general Bios setting 'Enable Arcade Protect'. This setting is designed
+    to allow the Universe Bios to be run easier in an arcade environment. It basically
+    protects the Universe Bios settings and operator by doing the following;
+     - The Test mode button must also be pressed with the normal button codes to access
+       the Main Universe Bios menu, Memory Card Manager, Test Mode or Controller Test.
+     - If a game was to crash for any reason the system will reset and start over instead
+       of stopping and displaying the error on screen. This is how the normal Bios works.
+    When using this new setting one should also disable Input Crossing and the In Game
+    Memu to stop other methods of adding credits or cheating.
+  Added the ability to fade out music in the Jukebox Player instead of stopping it dead
+    (nice if you want to record never ending tracks but it does not work with all games).
+  Added an option to soft reset the system from the crosshatch screen.
+  Added an option to get to the memory viewer from the crosshatch screen, this can be
+    helpfull in tracking hardware faults if you only get the cross hatch from power on.
+  Added the ability to change game SLOT in the memory viewer (use select buttons). 
+  Pressing only button A on the splash screen will make it disappear faster.
+
+Speedups
+
+  Speeded up the way cheats are patched into memory a little (unlooped code).
+  Speeded up coin to select button swapping (code was running twice per frame).
+  Speeded up the ingame menu check by putting some code in place of a waitloop.
+
+Changes
+
+  Removed the welcome message the first time the bios is run on MVS hardware. Instead it
+    will default to Euro Arcade mode and the BootUp HW Test will also be disabled.
+  The Universe Bios will now force a backup RAM test when its first run in a new system.
+  Removed the option to disable the splash screen (MVS hardware only).
+
+
+Fixes
+
+  Fixed possible gfx garbage behind the SNK logo at the bottom of screen in test mode.
+  Fixed possible bug that could cause (under certern situation) the buttons not to respond
+    after an exception error on AES hardware only.
+  Fixed a NeoGeo logo curruption issue in the Universe Bios menus if you exited the slot
+    selection screen without choosing a slot first (affected 2SLOT hardware only).
+  Fixed the kof2003 official MVS cart not changing languages correctly in arcade mode. The
+    problem was caused by SNK/Playmore locking the language to English on English carts.
+  Fixed Matrimelee not changing language when changing region on MVS hardware in arcade mode.
+  Fixed Metal Slug 4 music in the jukebox player as it played distorted if you used the
+    jukebox before allowing the game to play.
+  Fixed the SoftDIPs in Samurai Shodown 4 through Samurai Shodown 5 Special so when in
+    Japan region the language setting shows 'Japanese' instead of 'English'.
+  Fixed the SoftDIPs in Baseball Stars Pro when in USA region (demo sound DIP placement).
+  Fixed a SoftDIP problem that could cause DIP settings to appear wrong in some games after
+    changing regions (affected games that have a different ammount of DIPs per region).
+  Fixed a minor ingame menu color problem in King of Fighters 2003 on MVS hardware.
+  Fixed the exception error and memory viewer screens so that text is now readable
+    in King of Fighters 2003 on MVS hardware.
+  Fixed Aero Fighters 3 to stop showing level select when in arcade mode on AES hardware.
+  Fixed King of Fighters 2001 MVS version console mode menu select pointers.
+  Fixed King of Fighters 2001 MVS version console mode menu colors from going wrong when  
+    starting a 2 player game (single all and pratice text).
+  Fixed the SoftDIPs to work when playing the newer (less censored) version of Samurai
+    Shodown 5 Special on AES hardware in arcade mode.
+ 
+Cheats
+
+  Made AES Samurai Shodown 5 Special Fatal unlock and sound fix one cheat.
+  Added Shrink Mode cheat to Samurai Shodown 5 Special.
+  Added cheats to enable blood in King of Fighters 97, 98 and 99.
+  Added cheats to enable blood in Samurai Shodown 1, 2 and 3.
+  Added cheats to enable blood in Ganryu.
+  Added cheats to Samurai Shodown 4 to play as Zankuro.
+  Added cheats to Samurai Shodown 5 to play as Yumeji or Sankuro.
+  Added cheats to Kabuki klash to play as bosses.
+  Added cheats to Rage of Dragons to play as Abobo and Johann.
+  Added cheats to Sonic Wings 3 to play as Red Rabbit or Diabloon.
+  Added a secret character cheat to World Heroes Perfect.
+  Added a secret character cheat to Magical Drop 2 and 3.
+  Added a secret character cheat to The Last Blade.
+  Added a secret character cheats to The Last Blade 2.
+  Added auto fire cheats to all games in the Metal Slug Series.
+  Added auto fire cheats to Sonic Wings 2 and 3.
+  Added auto fire cheats to Ghost Pilots.
+  Added auto fire cheats to Zed Blade.
+  Added Infinite Time cheats for 2Up, 3Up and 4UP in League bowling.
+  Added cheats for King of Fighters Special Edition 2004 hack.
+  Added cheats for King of Fighters 10th Anniversary hack.
+  Fixed cheats to show in the korean version of Samurai Shodown 2.
+  Fixed boss cheat to work in the korean version of King of Fighters 1999.
+  Fixed cheats in the alt version of Magician Lord.
+  Fixed AES infinate credit cheats in Sonic Wings 2 and 3.
+  Fixed some minor spelling mistakes in the cheat engine.
+
+CRC additions
+
+  King of Fighters Special Edition 2004 hack.
+  King of Fighters 10th Anniversary hack.
+  King of Fighters 2003 Ultra Plus bootleg.
+  King of Fighters 1999 (korean MVS version).
+  King of Fighters 2002 Plus (alt bootleg).
+  Samurai Shodown 2 (korean MVS version).
+  Samurai Shodown 5 Special MVS version.
+  Samurai Shodown 5 Special newer AES version.
+  V-Liner alt set.
+
+
+---------------------------------------------------------------------
+
+
+WHATS NEW IN VERSION 2.0
+------------------------
+
+IMPORTANT.
+
+  This release will totally reset the MVS backup memory. This means UNIVERSE BIOS settings,
+  SoftDIPs, and game settings will be lost. This will also happen when upgrading from a
+  previous version. You will need to enter initial soft dip settings again. Multislot users
+  will need to set the 'game select' softDIP to free if you wish to allow game swapping
+  before entering credits. Regions stored on memory cards (AES users) will also be lost
+  until set up again but saved game data will not be lost.
+
+Samurai Shodown 5 Special related stuff.
+
+  Removed the protection stoping the game from running in Arcade mode on AES hardware.
+  Added a cheat to unlock fatalities which were censored out of the AES original cart.
+  Added a cheat to fix the round win sounds that were broke in the AES original cart.
+  Added some game cheats to the database for the game.
+  Added CRC info into the CRC database (for the original AES cart only so far).
+  Fixed the NeoGeo logo in the splash screen when this game used (it was not centered).
+  Fixed sound in the Jukebox if accessed from system power on.
+
+Changes
+
+  Added code to fully reset backup RAM when a MVS system is run for the first time with the
+    UNIVERSE BIOS installed. This is to ensure correct SoftDIP compatability is maintained.
+  Added A new Patch Memory option to the In game menu.
+  Exiting the In game menu is now done by pressing button C.
+  Added a reboot option from the exception error screen.
+  Improved the splash screen (this could still be subject to change).
+  Improved the multislot only game selecting screen (shows before jukebox and CRC check).
+  Improved the Jukebox sound initilize routine. This results in the 'error starting sound'
+    error showing less when entering the jukebox, espicially with some older games.
+  Disabling the startup hardware test now also skips the callender test.
+  You will now see a Blue sreen on AES hardware if you power on the unit with no game in.
+  Removed the 'game select' softdip remembering code added in v1.3 because it never worked.
+
+Fixes
+
+  Fixed an Addres Error that only affected SLOT2 hardware happening after the unibios splash
+    screen if the 'bootup HW test' was disabled from the unibios general settings.
+  Fixed the force AES option (shows when system has a hardware fault) so it now sets up a
+    default Region of 'Europe', mode of 'Console' and also sets up the default soft dips.
+  Fixed the rogue green pixel strips that appeared on screen momentarily during the fade
+    in and out of the splash screen (mainly visable on AES hardware only).
+  Fixed the rogue pixel strips that could sometimes appear on screen momentarily during
+    entering and exiting the in game menu (this problem only happened sometimes).
+  Fixed a small issue that could make some softdips become messed on multislot hardware
+    for games not in slot1 (mslug3 and kof2001 for example).
+  Fixed a possible language soft dip display issue with Rage of the Dragons.
+  Fixed an issue that affected soft dips in 'Street Hoop' when in Japan region. While its
+    not perfect its still far better than it was (dips are now correctly named).
+  Fixed an issue that affected soft dips in 'Samurai Shodown 4' & 'Samurai Shodown 5' when
+    in Japan region (in relation to the blood setting). While not perfect you can now turn
+    on Blood far easier than before.
+  Fixed a issue that caused WindJammers to crash after the bonus bowling level.
+  Fixed the MVS version of kof2001 to romove the small green line that appeared across the
+    screen in console mode, problem produced from the menu color fixes added in v1.3.
+  Fixed the MVS version of kof2003 so that when in the cheat database the ammount of cheats
+    is now displayed instead of a blank space.
+
+Cheats and CRC
+
+  Added cheat to enable '4way battle mode' in Kizuna Encounter.
+  Added a cheat to play as Zankuro in samurai shodown 3.
+  Fixed Rage of the Dragons 1up infinite energy cheat from locking up the game at the
+    end of a round if game timer runs down to zero.
+  Added a cheat to force Japanese language in kof2003 as there is a problem with the
+    game not setting a Japan language on multislot hardware when in Japan region.
+  Added crc for a new found 2020 super baseball version.
+
+
+---------------------------------------------------------------------
+
+
+WHATS NEW IN VERSION 1.3
+------------------------
+
+AES support (nuff said).
+
+  some AES notes.....
+
+  Region settings are saved to the memory card, however if no card is available on
+    power up the system will default to EURO / CONSOLE operation.
+  To do a hardware check hold buttons A+B+D during power up this will keep the system
+    looping through a hardware check until all buttons are released.
+  When in ARCADE mode devmode is enabled and cannot be disabled.
+  There is no attract mode sound for some games in MVS mode. This is beacuse they
+    read the demo sound soft dip from backupram (which the aes dosnt have)
+    instead of the adjescent RAM location (this problem exists on the DEBUG bios also).
+  Some early games (nam75 for example) will have currupted 'how to play' screens.
+    This is because the AES does not have the needed character font the MVS has.
+  When in USA mode some games will have a currupted 'winners dont use drugs' screen.
+    This is because the AES does not have the needed character font the MVS has.
+  The Test Mode menu is not availabe for use.
+
+Additions
+
+  The NeoGeo/ProGear logo now displays only once at the beginning when in console mode
+    to match bios on AES.
+  New entry method to access the in game menu, START+A+B+C. Old access methods are
+    still usable.
+  Ability to abort the game cart crc check while its calculating. 
+  Ability to exit from slot selection screen (multislot hardware only).
+  Enabled the AES controller test, access via holding player 2 A+B+C+D during power on or
+    splash screen.
+  68000 exception handling. Instead of games reseting they will stop and the current 68000
+    status will be displayed.
+  Simple memory/vram viewer that can be accesses from the hardware error screen.
+
+Changes
+
+  Exiting the jukebox or crc check on multislot HW now restores the initially used font.
+  Added a shadow to bring out the NeoGeo logo in the splash screen and main menu.
+  Made the Red color used in the Splash Screen and main menu a little darker.
+  Improved the hardware check so you only see a couple of flashes on screen at power on
+    instead of lots of green garbage.
+  Improved the hardware error screens to make them look nicer but I'm sure you will never
+    want to see these.
+  Changed the test mode hardware test so that the test memory card section no longer looses
+    any data on the card. This problem affected the original BIOS also.
+  Changed some very bad English in the card manager including one point where the word 'no'
+    should actually be 'yes' when it comes to confirming data delete. This problem affected
+    the original BIOS also.
+
+Fixes
+
+  Fixed an issue that caused some hardware error messages appear darker or distorted.
+  Fixed the 'gameselect' option being lost the first time the UNIVERSE BIOS is used on
+    multislot hardware.
+  Fixed button (A) not responding when trying to continue from failed HW check when using
+    a joypad.
+  Fixed credits from 2nd coin shoot not showing but still registering in VS-MODE when the
+    game dosent support it.
+  Fixed the select buttons not registering in the testmode input test when in console mode.
+  Fixed testmode input test so that the input crossing feature does not take effect while
+    testing buttons. 
+  Fixed a problem in the memory card manager that stoped the letter 'o' visually showing when
+    selecting a card name. This problem affected the original BIOS also.
+  Fixed a clicking sound that sometimes happened during boot if the hardware check was disabled.
+  Fixed a soft dip issue that could cause confusion (because we force softdips to display in
+    English). Basically in some games the language softdip setting is different depending on
+    region. For example the kof games default language now reads 'Japanese' instead of 'English'
+    when in Japanese mode. There could be issues like this in other games too, if you find any
+    please let me know.
+
+Game Fixes
+
+  Fixed Sengoku 3 language not changing when swapping region in arcade mode.
+  Fixed many menu problems in the official kof2001 mvs cart when in console
+    mode (there are still problems though). 
+  Fixed a Matrimelee font problem in menus on multislot hardware and in the
+    jukebox / crc check on slot1 hardware.
+  Fixed Pochi and Nyaa sound distortion in the jukebox if the game is not
+    allowed to run first.
+  Fixed missing font in crc check, jukebox, and ingame menu for KOF2003.
+
+New and Updated Cheats
+
+  SNK vs Capcom
+  Samurai Shodown 5
+  Metal Slug 5
+  King of Fighters 2003
+  Pochi and Nyaa
+  Zintrick
+  Samurai Shodown 2
+
+New original/hacked game CRC's to database
+
+  SNK vs Capcom
+  SNK vs Capcom (bootleg cart)
+  Samurai Shodown 5
+  Metal Slug 5 (MVS and AES)
+  Pochi and Nyaa
+  King of Fighters 1997 Plus
+  King of Fighters 2001 (alternate set)
+  King of Fighters 2002 Plus
+  Metal slug 4 Plus
+  Metal slug 5 Plus
+  SNK Vs Capcom Plus
+  SNK Vs Capcom Super Plus
+  King of Fighters 2003 (MVS and AES)
+  King of Fighters 2003 (bootleg cart)
+  Top Hunter: Roddy & Cathy (set 2)
+
+
+---------------------------------------------------------------------
+
+
+WHATS NEW IN VERSION 1.2
+------------------------
+
+Additions
+
+  Added Multislot support to the Jukebox Player and Gamecart CRC check.
+  Added the ability to continue on from a hardware error.
+  Allowed Test Mode button to give access to TEST mode menu while in console mode.
+  Cheats for MATRIMELEE added to the cheats database.
+
+Test mode improvements
+
+  Time added to main test mode menu screen (date format changes from euro to usa region).
+  Crosshatch test shrunk to match fullscreen used by most games.
+  Full color fade bars in color test (why the original BIOS never did this is beyond me).
+  Setting up the code number will now be in English even when set to Japan region.
+  Soft DIP settings will always be in English even if set to Japan region. (Soft DIPs
+    shown will always be from Euro region, this means some settings will not work unless
+    system set to EURO region, like the language soft DIP for example).
+
+Changes
+
+  Disabling the hardware test (general bios settings) now disables the Z80 test also.
+  Visually improved the gamecart crc check screen making it better.
+  Games that use the protected banking system no longer calculate the crc32 for those
+    banks, instead it is indicated that they are custom.
+  Doing a 'WORK RAM TEST' (all hard dips on at power on) no longer clears region settings.
+  Updated CRC32 database although there could still be errors.
+
+Fixes
+
+  Fixed a lockup if entering the Memory Card Manager or Test Mode from the splash screen
+    when running in console mode with hard DIP 8 (stop) on.
+  Fixed 'unlock Kyo & Iori' kof99 cheat (no longer jumps to character select after win).
+  Fixed distorted music in Jukebox Player with games ROTD, KOF2002 and MATRIMELEE.
+  Fixed REALBOUT2, KOF98, NEOCUP98 and BREAKREV reset on the 'winners dont use drugs'
+    screen on multislot Hardware.
+
+
+---------------------------------------------------------------------
+
+
+WHATS NEW IN VERSION 1.1
+------------------------
+
+Additions
+
+  Added support for the correct USA BIOS coin inputing when in USA arcade mode.
+    This allows for seperate coin input for player 1 and 2.
+    The ability to use 4 coin inputs (turned on via hard dip 2).
+    The ability to start a 1 player game on players 2 side.
+
+  Added support for VS-MODE in Euro and Japan region for games that use it (fighters).
+    This mode is enabled by simply turning on hard dip 2, when enabled games use a coin
+    inserting like USA as mentioned above. I have also patched test mode so the setting
+    shows in the hard dips menu. VS-MODE may do more also ingame but I am not sure.
+
+  Program ROM crc checking
+    This option allows you to confirm your program roms are not bad. NOTE, not all crc's
+    are yet in the database so many roms may give a '??' or 'NG' error when they are
+    correct. If you get either of these messages please email me with the details.
+
+  In game menu system
+    Access to debug dips (now removed from the main menu).
+    Hardware reset option.
+
+  The debug dip cursor now wraps from left to right / right to left.
+  MVS hardware type is now displayed in bottom right corner of the main menu.
+  Changed button detection which should make selecting regions on some machines easier.
+  When in Euro or Japan mode I have made coin shoot2 '1coin 1credit' by default.
+
+Cheats/Debug DIPs
+
+  Fixed a possible crash/lockup situation when accessing the cheat engine.
+  Fixed some typos and incorrect cheat descriptions in the cheats engine.
+  Added more cheats to the cheat engine database.
+  Cheats that use debug dips now clear the dip/s they set when that cheat is disabled.
+    (dips set by cheats show on debug screen by hilighting dip number)
+    (dips are not cleared if it is also set in the debug dip settings)
+  Blazing star no longer resets when exiting from the in game menu in console mode.
+    (The reset was programmed by game design)
+
+Jukebox
+
+  Fixed an issue that could cause an lockup when entering the jukebox.
+  Added an error message if for some reason the sound dosent initilize.
+  The initial sound used when entering the jukebox will now be a valid one.
+  Fixed all games that played double samples at the beginning of tune.
+  Fixed a issue that caused sound effects not to play in 'Nightmare in the Dark'.
+  Fixed a issue that caused 'Puzzle Bobble 2' music not to play.
+
+Visual
+
+  The splash screen now fades in and out.
+  Changed the effect used when deleting menu screens a little.
+  Made the in game menus background color a little darker.
+  Fixed an issue with font colors when game in slot1 is 'Fatal Fury III'.
+  Fixed small red lines in splash screen and main menu when using certain games.
+  Fixed NeoGeo logo not showing on splash screen and main menus on 4/6slot hardware.
+  Fixed NeoGeo logo on 2slot hardware if NAM1975 or PBOBBLE2 was the first game.
+
+Misc
+
+  Fixed possible crash on 'Winners Dont use Drugs' if debug dips used on a multislot.
+  Fixed possible crash when exiting debug dips settings on a multislot system.
+  Fixed Hard DIP 8 not forcing pause in console mode.
+
+
+---------------------------------------------------------------------
+
+
+WHATS NEW IN VERSION 1.0
+------------------------
+
+Initial release
